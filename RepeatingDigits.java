@@ -1,10 +1,9 @@
 import java.util.Scanner;
 class RepeatingDigits
 {
-public static void main(String args[]) throws IOException
+public static void main(String args[])
 {
 BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-PrintWriter p = new PrintWriter(System.out, true);
 int freq[] = new int[10];
 int i, d, c=0;
 for(i=0; i<10; i++)
@@ -12,7 +11,9 @@ for(i=0; i<10; i++)
 freq[i] = 0;
 }
 
-int num = Integer.parseInt(in.readLine());
+int num;
+Scanner sc=new Scanner(System.in);
+num=sc.nextInt();
 while(num>0)
 {
 d = num%10;
@@ -28,8 +29,8 @@ break;
 }
 }
 if(c==1)
-p.println("yes");
+System.out.println("yes");
 else
-p.println("no");
+System.out.println("no");
 }
 }
